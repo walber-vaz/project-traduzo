@@ -23,4 +23,5 @@ class LanguageModel(AbstractModel):
     # Req. 3
     @classmethod
     def list_dicts(cls):
-        raise NotImplementedError
+        languages = cls._collection.find()
+        return [language for language in languages]
