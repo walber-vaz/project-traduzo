@@ -19,8 +19,8 @@
           <li class="row from">
             <select name="translate-from">
                 {% for language in languages %}
-                    <option value="{{ language.id }}"
-                        {% if language.id == translate_from %}
+                    <option value="{{ language.acronym }}"
+                        {% if language.acronym == translate_from %}
                             selected
                         {% endif %}
                     >{{ language.name.upper() }}</option>
@@ -33,8 +33,8 @@
           <li class="row to">
             <select name="translate-to">
                 {% for language in languages %}
-                    <option value="{{ language.id }}"
-                        {% if language.id == translate_to %}
+                    <option value="{{ language.acronym }}"
+                        {% if language.acronym == translate_to %}
                             selected
                         {% endif %}
                     >{{ language.name.upper() }}</option>
